@@ -1,0 +1,19 @@
+POST http://localhost:1234/api/storage
+Content-Type: multipart/form-data; boundary=Boundry
+
+--Boundry
+Content-Disposition: form-data; name="image"; filename="test.png"
+Content-Type: image/png
+
+< ./test.png
+--Boundry-->
+
+###
+PATCH http://localhost:1234/api/storage/6717ccc5e397f213f4028eba
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDSUYiOiIxMTAiLCJpYXQiOjE3MzAxOTgzNTksImV4cCI6MTczMDIwNTU1OX0.Pw7K8xZc9S-U1pH8Ga9gym_fNibl6h-XTJOsFjDFwVs
+
+{
+    "Array_textos": "Tercer intento",
+    "Array_imagenes": "http://localhost:1234/file-1729610375428.png"
+}

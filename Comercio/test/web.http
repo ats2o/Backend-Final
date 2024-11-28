@@ -1,0 +1,54 @@
+GET http://localhost:1234/api/web/usersIteneresados
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDSUYiOiIxMTAiLCJpYXQiOjE3MzAzMDMyMzAsImV4cCI6MTczMDMxMDQzMH0.ooWYNS4rGEd8MDCKO2jUV7d7GZK_-4gD0IvAHUK0crA
+###
+GET http://localhost:1234/api/web
+
+###
+GET http://localhost:1234/api/web/6717c794b83363ed38a2a6e9
+
+###
+POST http://localhost:1234/api/web
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDSUYiOiIxMTAiLCJpYXQiOjE3MzAyMjQ2OTYsImV4cCI6MTczMDIzMTg5Nn0.QncRQycPcnXzImjXeCs_aO0L4bk1GohFNgBKjLF8aO4
+
+{
+    "Ciudad": "Madrid",
+    "Actividad": "Futbol",
+    "Titulo": "Foto",
+    "Resumen": "Prueba de la peniltima tarea",
+    "Array_textos": [],
+    "Array_imagenes": [],
+    "resenas_user": {
+        "Scoring": 3, 
+        "Numero_puntuaciones": 5,
+        "Resenas": "Muy buena"
+    }
+}
+
+###
+PUT http://localhost:1234/api/web/6717c794b83363ed38a2a6e9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFmY2UxZTBiNGViMzg0MzJhOTAwOTgiLCJpYXQiOjE3MzAxMzc2NzYsImV4cCI6MTczMDE0NDg3Nn0.-6DhuAoKbBkBdAGvsLhLHtJj7WAmRTiTRjAul65Z_VI
+
+{
+    "Ciudad": "Galicia",
+    "Actividad": "Futbol",
+    "Titulo": "Foto",
+    "Resumen": "Prueba de la peniltima tarea",
+    "Array_textos": [],
+    "Array_imagenes": [],
+    "resenas_user": {
+        "Scoring": 3, 
+        "Numero_puntuaciones": 4,
+        "Resenas": "Buena"
+    },
+    "ref_cif": "110"
+}
+
+###
+DELETE http://localhost:1234/api/web/logical/6717c94429a923e80e2ef09b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzAxMzU4MDIsImV4cCI6MTczMDE0MzAwMn0.5zJv7N_jwL-x_heFuFL3A7K0cjSStOQgvPxi3BefFIQ
+
+###
+DELETE http://localhost:1234/api/web/6717c94429a923e80e2ef09b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzAxMzU4MDIsImV4cCI6MTczMDE0MzAwMn0.5zJv7N_jwL-x_heFuFL3A7K0cjSStOQgvPxi3BefFIQ

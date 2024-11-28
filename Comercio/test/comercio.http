@@ -1,0 +1,45 @@
+GET http://localhost:1234/api/comercio/?ordenar=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
+###
+GET http://localhost:1234/api/comercio/90 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
+### 
+
+POST http://localhost:1234/api/comercio HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
+
+{
+    "name": "Adidas",
+    "CIF": "110",
+    "direccion": "calle Sanse, Madrid",
+    "email": "adidas@gmail.com",
+    "telefono": "629382394",
+    "id": 6
+}
+###
+
+POST http://localhost:1234/api/comercio/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzMDMyMTUsImV4cCI6MTczMDMxMDQxNX0.T6FJk5ZzqhsZJYbRTiPmKHyEiOszzy5KpaCRsUo3Ak8
+
+{
+    "email": "adidas@gmail.com"
+}
+
+###
+PUT http://localhost:1234/api/comercio/80 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Uber",
+    "CIF": "80",
+    "direccion": "calle Perales, Madrid",
+    "email": "uber@gmail.com",
+    "telefono": "692304293",
+    "id": 2
+}
+###
+//DELETE http://localhost:1234/api/comercio/110 HTTP/1.1
+###
+DELETE http://localhost:1234/api/comercio/logical/110 HTTP/1.1
