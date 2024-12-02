@@ -120,5 +120,37 @@ const DeleteUser = async (req, res) => {
     }
 }
 
+// Función asíncrona para actualizar los datos de un usuario
+const UpdateUserDatos = async (req, res) => {
+    try {
+        // Obtiene el ID del usuario de los parámetros de la solicitud
+        const id = req.params.id
+        // Extrae y valida los datos del cuerpo de la solicitud
+        const body = matchedData(req)
+        // Busca y actualiza el usuario por ID, devolviendo los nuevos datos seleccionados
+        const data = await userModel.findByIdAndUpdate(id, body, {new:true, select: 'nombre email ciudad intereses permiteofertas'})
+        // Envía una respuesta con un mensaje de éxito y los datos actualizados del usuario
+        res.send({message: 'Usuario modificado', data})
+    } catch (err) {
+        // Maneja cualquier error que ocurra durante el proceso y envía una respuesta de error
+        handleHttpERROR(res, 'ERROR_UPDATE_USER', 403)
+    }
+}
+
+// Definimos una función asíncrona llamada DeleteLogicalUser que recibe dos parámetros: req y res
+const DeleteLogicalUser = async (req, res) => {
+    try {
+        // Extraemos el id de los datos validados de la solicitud (req)
+        const {id} = matchedData(req)
+        // Llamamos al método delete del modelo userModel para eliminar lógicamente el usuario con el id proporcionado
+        const data = await userModel.delete({_id:id})
+        // Enviamos una respuesta con un mensaje de éxito y los datos resultantes de la operación
+        res.send({message: 'Usuario eliminado logicamente', data})
+    } catch (err) {
+        // En caso de error, manejamos el error enviando una respuesta con un mensaje de error y un código de estado 403
+        handleHttpERROR(res, 'ERROR_DELETE_USER', 403)
+    }
+}
+
 // Exportamos las funciones para que puedan ser utilizadas en otras partes de la aplicación
-module.exports = { getAllUser, register, login, UpdateUser, DeleteUser }
+module.exports = { getAllUser, register, login, UpdateUser, DeleteUser, UpdateUserDatos, DeleteLogicalUser }
