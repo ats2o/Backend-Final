@@ -1,13 +1,14 @@
 GET http://localhost:1234/api/comercio/?ordenar=asc
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4OWZkZDBiZTk4MTE0YjczNzM3ZDgiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzI4MTI5MTksImV4cCI6MTczMjgyMDExOX0.8kN5CRYfOObEOImeo6aVqkJ3U7ni_he9lz51nFdX8Rw
+
 ###
 GET http://localhost:1234/api/comercio/90 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
-### 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4OWZkZDBiZTk4MTE0YjczNzM3ZDgiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzI4MTI5MTksImV4cCI6MTczMjgyMDExOX0.8kN5CRYfOObEOImeo6aVqkJ3U7ni_he9lz51nFdX8Rw
 
+### 
 POST http://localhost:1234/api/comercio HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAxMzUyODEsImV4cCI6MTczMDE0MjQ4MX0.MgnJnsKeyxFsQzCyUgcfv9E_T4eH09ti35w2k__EGX4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4OWZkZDBiZTk4MTE0YjczNzM3ZDgiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzI4MTI5MTksImV4cCI6MTczMjgyMDExOX0.8kN5CRYfOObEOImeo6aVqkJ3U7ni_he9lz51nFdX8Rw
 
 {
     "name": "Adidas",
@@ -17,11 +18,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwM
     "telefono": "629382394",
     "id": 6
 }
-###
 
+###
 POST http://localhost:1234/api/comercio/login
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFlOGUwMjhlN2FhMDgyNjQwNTZhMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzAzMDMyMTUsImV4cCI6MTczMDMxMDQxNX0.T6FJk5ZzqhsZJYbRTiPmKHyEiOszzy5KpaCRsUo3Ak8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzQ4OWZkZDBiZTk4MTE0YjczNzM3ZDgiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzI4MTI5MTksImV4cCI6MTczMjgyMDExOX0.8kN5CRYfOObEOImeo6aVqkJ3U7ni_he9lz51nFdX8Rw
 
 {
     "email": "adidas@gmail.com"

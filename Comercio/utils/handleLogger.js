@@ -1,6 +1,5 @@
 // Importamos la clase IncomingWebhook del paquete @slack/webhook
 const { IncomingWebhook } = require("@slack/webhook");
-
 // Creamos una instancia de IncomingWebhook utilizando la URL del webhook de Slack
 // que se encuentra en las variables de entorno (process.env.SLACK_WEBHOOK)
 const webHook = new IncomingWebhook(process.env.SLACK_WEBHOOK);

@@ -1,10 +1,7 @@
 // Este archivo "comercio.js" en validators se va a encargar de a la hora de las peticiones validarlas
-
 const { check } = require('express-validator') // Importo la funcion check
-
 const validateResults = require('../utils/handleValidator') 
 // Importo este archivoo que validara que todos los resultados qeu se quieran mandar estan bien
-
 // Creo una variable constante que validara las creaciones de comercios
 const validateCreateItem = [
     check("name").exists().isString().notEmpty(),

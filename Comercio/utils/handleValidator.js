@@ -7,14 +7,12 @@ const validateResults = (req, res, next) => {
         // Intenta validar los resultados de la solicitud (req)
         // Si hay errores de validación, se lanzará una excepción
         validationResult(req).throw()
-        
         // Si no hay errores, llama a la siguiente función middleware
         return next()
     } catch(err) {
         // Si hay errores de validación, captura la excepción
         // Establece el estado de la respuesta HTTP a 403 (Prohibido)
         res.status(403)
-        
         // Envía una respuesta con los errores de validación en formato JSON
         res.send({errors: err.array() })
     }

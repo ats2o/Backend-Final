@@ -5,13 +5,10 @@ const mongoose = require('mongoose');
 const dbconnection = () => {
     // Obtiene la URI de la base de datos desde las variables de entorno
     const db_uri = process.env.DB_URI;
-    
     // Imprime la URI de la base de datos en la consola (útil para depuración)
     console.log(db_uri);
-    
     // Desactiva la opción 'strictQuery' de mongoose
     mongoose.set('strictQuery', false);
-    
     try {
         // Intenta conectar a la base de datos usando la URI obtenida
         mongoose.connect(db_uri);

@@ -1,5 +1,4 @@
 // Este archivo "comercio.js" su funcion es ejecutar las variables de la carpeta (controller/user)
-
 const express = require('express') // Importo la funcion express
 const { getComercio, getComercios, postComercio, loginComercio, putComercio, deleteComercio, deleteComerciological } = require('../controller/comercio')
 // Importo todas las variables del archivo user de la carpeta controller para usarlas mas tarde
@@ -30,7 +29,6 @@ const comercio = express.Router()
  */ 
 comercio.get('/', authMiddleware, CheckRol(["admin"]), getComercios); 
 
-
 /**
  * @openapi
  * /api/comercio/id:
@@ -49,7 +47,6 @@ comercio.get('/', authMiddleware, CheckRol(["admin"]), getComercios);
  *              description: Validation error
  */ 
 comercio.get('/:CIF', authMiddleware, CheckRol(["admin"]), validateGetItem, getComercio); // Filtra unicamente por un unico comercio (CIF)
-
 
 // POST 
 /**
@@ -94,7 +91,6 @@ comercio.post('/', authMiddleware, CheckRol(["admin"]), validateCreateItem, post
  */ 
 comercio.post('/login', authMiddleware, validateLogin, loginComercio)
 
-
 // PUT
 /**
  * @openapi
@@ -116,7 +112,6 @@ comercio.post('/login', authMiddleware, validateLogin, loginComercio)
  *              description: Validation error
  */ 
 comercio.put('/:CIF', authMiddleware, CheckRol(["admin"]), validateGetItem, validateCreateItem,  putComercio);
-
 
 // DELETE  
 /**
