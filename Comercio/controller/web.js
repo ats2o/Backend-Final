@@ -141,4 +141,4 @@ const deleteItemLogical = async (req, res) => {
 }
 
 // Exporto las variables creadas
-module.exports = { getUser, getItems, getItem, createItem, updateItem, deleteItem, deleteItemLogical, getInterestedUsers }
+module.exports = { getUser, getUserCiudad, getCiudad, getCiudadActividad, getItems, getItem, createItem, updateItem, patchItem, deleteItem, deleteItemLogical }
